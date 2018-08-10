@@ -4,9 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="index.css">
   <title>Document</title>
 </head>
 <body>
-  <h1>关于vue的学习</h1>
+  <div id="app">
+   {{message}}
+  </div>
+  <div id="app_2">
+    <span v-bind:title="message">
+         ‘v-bind：title’鼠标悬停几秒钟查看此处动态绑定的提示信息！
+    </span>
+  </div>
+  <div id="app_3">
+    <p v-if="seen">“v-if”true能看见，false看不见</p>
+  </div>
+<div id="transition">
+  <button v-on:click="show = !show"> 
+    Toggle
+  </button>
+  <transition >
+    <p v-if="show">hello</p>
+  </transition>  
+</div>
+<div id="example-1">
+<button @click="show = !show">
+  Toggle render
+</button>
+<transition name="slide-fade">
+  <p v-if="show">helle</p>
+</transition>
+</div>
+<div id="example-2">
+{{a}}
+<button v-on:click="a = 'baz'">Change it</button>
+</div>
+
+  <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
