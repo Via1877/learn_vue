@@ -1,0 +1,141 @@
+.intro_txt{
+  padding:0;
+}
+.tab-content{
+  padding-top:20px;
+}
+
+.checkbox label{
+  color:#6c818d;
+  font-size: 14px;
+
+}
+.checkbox input[type="checkbox"]{
+  margin-top:3px;
+}
+.all_check>label {
+  font-size: 12px;
+}
+.checkbox label>p{
+  font-size: 12px;
+  color:#9aa0a8;
+  margin-top:5px;
+}
+.checkbox {
+  padding:20px 0 20px 12px !important;
+  border-bottom:1px solid #e0e9f1;
+  margin-top:0 !important;
+  margin-bottom:0!important;
+  position: relative;
+
+}
+.all_check{
+  margin:0;
+  padding:7px  0 7px 10px!important;
+  background:#f9fafe;
+  border:1px solid #e0e9f1;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.input_group{
+  border:none;
+}
+.btn_group_right{
+  position: absolute;
+  right:0;
+  top:25%;
+}
+.btn_group_right>a{
+  color:#9aa0a8;
+  font-size: 12px;
+
+}
+.btn_group_right>a:first-child{
+  margin-right:10px;
+}
+.form-group>label{
+  font-size: 14px;
+  color:#6c818d;
+  font-weight:200;
+  margin-bottom:7px;
+}
+.form-group {
+  margin-bottom:26px;
+}
+.create_form{
+  width:660px;
+}
+.competence_group>h3{
+   font-size: 14px;
+   color:#6c818d;
+   font-weight:200;
+   margin-bottom:7px;
+}
+.competence_group>h3+p{
+font-size: 12px;
+  color:#9aa0a8;
+  padding-bottom:20px;
+}
+.competence_group ul>li{
+  margin-left:10px;
+  margin-right:10px;
+}
+.competence_group ul>li>a[role="tab"]{
+  color:#93a5ae;
+  font-size: 14px;
+  padding:8px 10px;
+  border:none;
+}
+.competence_group ul>li>a[role="tab"]:hover,
+.competence_group ul>li>a[role="tab"]:focus
+{
+  background:#00bca4;
+  color:#fff;
+  border:none;
+}
+.competence_group ul>li.active>a{
+background:#00bca4;
+color:#fff;
+border:none;
+}
+.padding30{
+  padding-bottom:10px;
+}
+.padding12L{
+  padding-left:12px;
+}
+.padding12R {
+  padding-right: 12px;
+}
+.padding0LR{
+  padding-left: 0;
+  padding-right: 0;
+}
+.sm-tit-hero{
+  font-size: 12px;
+  color:#9aa0a8;
+}
+.form-horizontal .control-label{
+  padding-top:0;
+}
+#form1{
+  margin-bottom:0;
+}
+.padding0B{
+  padding-bottom:0;
+}
+.panel-body{
+  padding:20px;
+}
+.padding10B{
+  padding-bottom:10px;
+}
+.inline-block{
+  display: inline-block;
+}
+.margin-4{
+  margin-top:-4px;
+}
