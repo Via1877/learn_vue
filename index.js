@@ -51,3 +51,10 @@ new Vue({
     console.log('a is: ' + this.a)
   }
 })
+new Vue({
+  el:'#html',
+  data:{
+
+    html:"<h1>hello world !你好我的新键盘，哈哈哈哈</h1>"
+  }
+})
