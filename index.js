@@ -4,6 +4,7 @@ var app = new Vue({
     message:"hello Vue.js,这是第一个vue"
   }
 })
+
 var app2 = new Vue({
   el:"#app_2",
   data:{
@@ -31,7 +32,8 @@ new Vue({
 var obj={
   a:9
 };
-// Object.freeze(obj)
+// Object.freeze(obj) //禁止改变数据
+
 var example2 = new Vue({
   el:"#example-2",
   data: obj
@@ -49,5 +51,35 @@ new Vue({
   created: function () {
     // `this` 指向 vm 实例
     console.log('a is: ' + this.a)
+  }
+})
+// 逆转消息
+var app5=new Vue({
+  el:"#app-5",
+  data:{
+    message:'Hello Vue.js!'
+
+  },
+  methods: {
+    reverseMessage:function(){
+      this.message=this.message.split('').reverse().join('');
+    }
+  }
+})
+var app6=new Vue({
+  el:"#watch",
+  data:{
+    v:1,
+    b:[]
+  },
+  methods:{
+    doSomething:function(){
+      this.v++
+    }
+  },
+  watch:{
+    'v':function(val,oddVal){
+      console.log(val,oddVal)
+    }
   }
 })

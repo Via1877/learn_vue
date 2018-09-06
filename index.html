@@ -39,6 +39,19 @@
 {{a}}
 <button v-on:click="a = 'baz'">Change it</button>
 </div>
+<div id="app-5">
+  <p>{{message}}</p>
+  <button v-on:click="reverseMessage">逆转消息</button>
+
+</div>
+<div id="watch">
+<p>{{v}}</p>
+<p v-text="v"></p>
+<p @click="doSomething">点我</p>
+</div>
+
+
+
 
   <!-- 开发环境版本，包含了有帮助的命令行警告 -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
