@@ -80,6 +80,13 @@ var app6=new Vue({
   watch:{
     'v':function(val,oddVal){
       console.log(val,oddVal)
-    }
+    },
+  }
+  })
+new Vue({
+  el:'#html',
+  data:{
+
+    html:"<h1>hello world !你好我的新键盘，哈哈哈哈</h1>"
   }
 })
