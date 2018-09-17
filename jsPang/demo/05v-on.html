@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>v-on 监听</title>
+</head>
+<body>
+
+  <div id="app">
+    <h1>v-on监听实例</h1>
+    <hr>
+    <p>v-on就是监听事件，可以利用v-on指令监听DOM事件来触发一些js代码</p>
+    <p>加分减分</p>
+    <p>本场比赛得分:{{num}}</p>
+    <button v-on:click="jiafen">加分</button>
+    <button v-on:click="jianfen">减分</button>
+    <hr>
+     <p>利用键盘</p> 
+     <input type="text" v-on:keyup.enter="onEnter" v-model="count"><br>
+
+  </div>
+
+
+<script src="../assets/js/vue.js"></script>
+<script>
+
+  var app = new Vue({
+    el:"#app",
+    data:{
+      num:0,
+      count:1,
+    },
+    methods:{
+      jiafen:function(){
+        this.num++;
+      },
+      jianfen:function(){
+        this.num--;
+      },
+      onEnter:function(){
+    this.num=this.num+parseInt(this.count);
+  }
+    }
+  })
+</script>
+</body>
+</html>

@@ -15,19 +15,59 @@
     <hr>
     <h4>v-for 解决模板循环问题</h4>
     <ul>
-      <li v-for="item in items">{{item}}</li>
+      <li v-for="item in sortItems">{{item}}</li>
     </ul>
+    <p>"sort（）需要比较数组，如果a-b>0，a在前，a-b<0 ，换位置，a-b=0，位置不变"</p>
+
+      <hr>
+      <h1>对象循环输出</h1>
+      <hr>
+      <ul>
+        <li v-for="student in students"> 
+          {{student.name}}:{{student.age}}
+        </li>
+      </ul>
+      <p>按年龄排序</p>
+      <ul>
+          <li v-for="student in sortStudents"> 
+            {{student.name}}:{{student.age}}
+          </li>
+        </ul>
   </div>
 
 
   <script src="../assets/js/vue.js"></script>
   <script>
+    function sortNumer(a,b){//比较数组，
+      return a-b;
+    }
+    function sortByKey(array,key){
+      return array.sort(function(a,b){
+        var x=a[key];
+        var y=b[key];
+        return ((x<y)?-1:((x>y)?1:0))
+      })
+    }
     var app = new Vue({
       el: "#app",
       data: {
         title: "v-for 指令：解决模板循环问题",
         items:[25,85,2,46,76,37,19],
-      }
+        students:[
+          {name:"Booth",age:35},
+          {name:"Bones",age:32},
+          {name:"Cam",age:33},
+          {name:"HG",age:35}
+        ]
+      },
+      computed:{
+        sortItems:function(){
+          return this.items.sort(sortNumer);//传入比较数组
+        },
+        sortStudents:function(){
+          return sortByKey(this.students,'age');
+        }
+      },
     })
   </script>
 </body>
