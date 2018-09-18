@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>v-bind指令</title>
+  <style>
+  .fontGreen{
+  color:green;
+  }
+  .active{
+    color:antiquewhite;
+
+  }
+      .text-danger{
+        color:red;
+      }
+      .classA{
+        font-size: 28px;
+      }
+      .classB{
+        font-size: 22px;
+      }
+  </style>
+</head>
+
+<body>
+
+  <div id="app">
+    <h1>v-bind指令</h1>
+    <hr>
+    <p>绑定src地址</p>
+<img v-bind:src="imgSrc" alt="" width="200">
+<br>
+<p>v-bind 缩写</p>
+<img :src="imgSrc" alt="" width="200">
+<hr>
+<p>
+  绑定css样式
+</p>
+<p v-bind:class="fontColor">绑定font-green类名</p>
+<p v-bind:class="{ active:isActive,'text-danger':hasError}">true时显示类名</p>
+<p v-bind:class="[classA,classB]">绑定类名数组,不是直接的类名，是定义的，后面接的才是真正的类名</p>
+<p v-bind:style="{color: activeColor, 'font-size':fontSize+'px'}">绑定style样式,不能有短横线，短横线要用'font-size'</p>
+<p v-bind:style="styleObj">绑定style样式在一个对象</p>
+
+  </div>
+
+
+  <script src="../assets/js/vue.js" ></script>
+  <script>
+    var app = new Vue({
+      el: "#app",
+      data: {
+        imgSrc:"../assets/images/fighting.jpg",
+fontColor:'fontGreen',
+isActive:true,
+hasError:false,
+classA:'active',
+classB:'fontGreen',
+activeColor:'red',
+fontSize:30,
+styleObj:{
+color:'#f290aa',
+fontSize:30+'px',
+fontWeight:600,
+}
+
+      }
+    })
+  </script>
+</body>
+
+</html>
